@@ -11,7 +11,7 @@
 </p>
 
 <p>
-	<%= image_tag(@product.image_url, class: "img-responsive") %> 
+	<%= image_tag(@product.image_url, class: "img-responsive") unless @product.image_url.blank? %> 
 </p>
 
 <p>

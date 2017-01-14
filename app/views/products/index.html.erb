@@ -6,9 +6,10 @@
     </div>
   </div>
   <div class="row">
+    <%#= @test_variable %> <!-- DELETE LATER-->
     <% @products.each do |product| %>
     <div class="col-sm-6 col-md-4" id="products">
-      <%= image_tag(product.image_url, class: "img-responsive image") %> 
+      <%= image_tag(product.image_url, class: "img-responsive image") unless product.image_url.blank? %> <!-- unless product.image_url.blank? important when there is no picture, without page wouldn't load -->
       <h3><%= product.name %></h3>
       <p>Description: <%= product.description %></p>
       <p>Color: <%= product.color %></p>
@@ -17,7 +18,7 @@
       <div id="actions">
         <%= link_to 'Show', product %>
         <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %> <!-- doesn't work ? check this later-->
       </div>
     </div>
     <!-- /col -->
