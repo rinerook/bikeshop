@@ -1,9 +1,12 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 // *** basic styles for body elements *** //
+
 * {
 	box-sizing: border-box;
+
 }
 
 body {
@@ -22,6 +25,7 @@ h1 {
 }
 
 // *** navigation styles *** //
+
 nav {
 	font-weight: bold;
 	text-decoration: none;
@@ -29,6 +33,7 @@ nav {
 }
 
 // *** footer styles *** //
+
 footer {
 	padding: 1vh;
 	background-color: black;
