@@ -22,6 +22,7 @@ h1 {
 
 .textcenter {
 	text-align: center;
+	padding: 1%;
 }
 
 // *** navigation styles *** //
@@ -35,8 +36,9 @@ nav {
 // *** carousel*** //
 
 .carousel-caption {
-   top: 0;
 	text-transform: uppercase;
+	display: block;
+	padding-bottom: 35%;
 }
 
 // *** footer styles *** //
