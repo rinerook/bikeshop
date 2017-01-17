@@ -1,0 +1,28 @@
+.carousel {
+	margin: 0 -15px;
+}
+
+.carousel-caption {
+	top: 0;
+	padding: 2em;
+	text-transform: uppercase;
+	font-size: 3em;
+}
+
+.caption-background{
+	background: rgba(0, 0, 0, 0.5); 
+	padding: 4%;
+}
+
+.carousel-indicators {
+	padding: 2em;	
+	color: black;
+}
+
+.carousel-indicators li {
+	background-color: red;
+}
+
+.carousel-indicators .active {
+	background-color: #000;
+}
