@@ -2,28 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+.actions {
+  padding: 1%;
 }
 
-label {
-  display: block;
-}
-
-form {
-	color: #000;
-	padding: 1%;
-}
-
-label {
-	color: #D8D8D8;
+.new-button {
+	margin: 2% auto;
+	background-color: #81F79F;
 }
 
 #products {
-	padding-top: 3%;
-	color: #D8D8D8;
+	padding-top: 2%;
 }

@@ -1,8 +1,10 @@
-<div class="staticpage">
+<div class="container-fluid navplace">
 		<h1>Editing Product</h1>
 
 		<%= render 'form', product: @product %>
 
-		<%= link_to 'Show', @product %> |
-		<%= link_to 'Back', products_path %>
+		<div class="container">
+			<%= link_to 'Show', @product %> |
+			<%= link_to 'Back', products_path %>
+		</div>
 </div>
