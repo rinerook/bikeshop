@@ -7,6 +7,10 @@
    <body>
 
      	<%= render 'shared/navigation' %>
+      
+      <!-- flash messages when sign in -->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
       <!-- rails content -->
       <%= yield %>
