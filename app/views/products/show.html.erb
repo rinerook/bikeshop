@@ -25,6 +25,15 @@
 	  <%= @product.price %> €
 	</p>
 
+	<p>
+		<strong>Best Comment:</strong>
+		<%#= @product.comments.rating_desc.first %> 
+		<%= @product.comments.rating_desc.first.body %> |
+		<strong>Rating:</strong>
+		<%= @product.comments.rating_desc.first.rating %>
+	</p>
+
+
 	<%= link_to 'Edit', edit_product_path(@product) %> |
-	<%= link_to 'Back', products_path %> | 
+	<%= link_to 'Back', products_path %>
 </div>
