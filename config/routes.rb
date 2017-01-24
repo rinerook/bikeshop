@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  #devise_for :users  # new routes below
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  resources :users
   resources :products 			# cause we generated our products controller via scaffolding, it added this route as wel
   get 'static_pages/about'
 
@@ -13,5 +16,5 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :create, :destroy]
 
   post 'static_pages/thank_you'
-
+ 
 end
