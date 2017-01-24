@@ -13,12 +13,10 @@
    <body>
 
      	<%= render "shared/navigation" %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <!-- rails content -->
+
       <%= yield %>
       <!-- /rails content-->
-
+      <%#= render "shared/notifications" %>
       <%= render "shared/footer" %>
 
    </body>
