@@ -1,11 +1,15 @@
+img {
+	height: 100vh;
+}
+
 .carousel {
 	margin: 0 -15px;
-	max-width: 100vw;
+	max-width: none;
 }
 
 .carousel-caption {
 	top: 0;
-	padding: 2em;
+	padding: 3em;
 	text-transform: uppercase;
 	font-size: 2em;
 }
@@ -15,15 +19,19 @@
 	padding: 5%;
 }
 
+// indicatorstyling 
+
+
 .carousel-indicators {
 	padding: 2em;	
-	color: black;
 }
 
 .carousel-indicators li {
-	background-color: red;
+	background-color: #E6E6E6;
+	border-color: black;
+	border-width: 1px; 	
 }
 
 .carousel-indicators .active {
-	background-color: #000;
+	background-color: #81BEF7;
 }
