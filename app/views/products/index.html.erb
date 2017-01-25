@@ -1,4 +1,4 @@
-<div class="navplace">
+<div class="container navplace">
    <p id="notice"><%= notice %></p>
    <div class="row">
       <div>
@@ -12,7 +12,7 @@
       <%= render product %>                    
       <% end %>
    </div>
-   <%= link_to 'New Product', new_product_path %>
+   <%= link_to 'New Product', new_product_path, class: "btn btn-default new-button" %>
 </div>
 <br>
 
