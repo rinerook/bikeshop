@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
 
   def landing_page
   	@featured_product = Product.first
-  	@products = Product.limit(4)
+  	@products = Product.limit(3)
   end
 
   def thank_you
@@ -13,7 +13,7 @@ class StaticPagesController < ApplicationController
       @email = params[:email]
       @message = params[:message]
       ActionMailer::Base.mail(:from => @email,
-          :to => 'karina.hochstein@gmx.de',
+          :to => 'rine@nurfuerspam.de',
           :subject => "A new contact form message from #{@name}",
           :body => @message).deliver_now
   end
