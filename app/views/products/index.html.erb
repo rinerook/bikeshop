@@ -10,7 +10,6 @@
    <div class="row">
       <%#= @test_variable %> <!-- DELETE LATER-->
       <% @products.each do |product| %>
-      <!-- <%#= render partial: "product", locals: {product: product} %> --> <!-- standard way --> 
       <%= render product %>                    
       <% end %>
    </div>
