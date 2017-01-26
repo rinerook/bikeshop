@@ -8,6 +8,7 @@
          <span class="icon-bar"></span>
          </button>
       </div>
+
       <div class="navbar-collapse collapse">
          <ul class="nav navbar-nav navbar-left">
             <li><%= link_to('home', root_path) %></li>
@@ -34,5 +35,11 @@
          <%= submit_tag("Go!", class: "btn btn-default navbar-btn") %>
          <% end %> 
       </div>
+   
    </div>
+
+   <div class="container-fluid">
+      <%= render "shared/notifications" %>
+   </div>
+
 </nav>
