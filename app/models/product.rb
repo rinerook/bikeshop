@@ -7,4 +7,8 @@ class Product < ApplicationRecord							#  product class is a subclass (inherits
  		comments.rating_desc.first
 	end
 
+	def lowest_rating_comment
+	  comments.rating_asc.first
+	end
+
 end

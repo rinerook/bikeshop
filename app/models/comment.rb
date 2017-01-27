@@ -4,5 +4,6 @@ class Comment < ApplicationRecord
 
 	# scrope for comment with best rating
 	scope :rating_desc, -> { order(rating: :desc) }
+	scope :rating_asc, -> { order(rating: :asc) }
 
 end
