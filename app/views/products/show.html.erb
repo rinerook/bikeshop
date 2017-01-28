@@ -1,50 +1,35 @@
-
 <div class="container navplace">
-    <div class="row mar-top">
-
-      <div class="col-md-6">
-        <%= image_tag(@product.image_url, class: "img-responsive") %>
-      </div>
-
-      <div class="col-md-1">
-              <h2>Name:</h2>
-              <h3>Price:</h3>
-              <h3>Colour:</h3>
-              <p>Description</p>
-      </div>
-            <div class="col-md-5">
-              <h2><%= @product.name %></h2>
-              <h3><%= @product.price %> Eur</h3>
-              <h3><%= @product.colour %></h3>
-              <p><%= @product.description %></p>
-      </div>
-
+  <div class="row mar-top">
+    <div class="col-md-6">
+      <h2>Name: <%= @product.name %></h2>
+      <p><strong>Description:</strong> <%= @product.description %> Eur</p>
+      <h3>Colour: <%= @product.colour %></h3>
+      <h3>Price: <%= @product.price %></h3>
     </div>
-
-    <div class="row mar-top">
-
-        <div class="col-md-6 col-xs-12">
-            <div class="container">
-              <% @product.highest_rating_comment.rating.times do %>
-              <span class="glyphicon glyphicon glyphicon-star"></span>
-              <% end %>
-              <h5>Best Comment</h5>
-              <p><%= @product.highest_rating_comment.body %></p>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-xs-12">
-            <div class="container">
-              <% @product.lowest_rating_comment.rating.times do %>
-              <span class="glyphicon glyphicon glyphicon-star"></span>
-              <% end %>
-              <h5>Worst Comment</h5>
-              <p><%= @product.lowest_rating_comment.body %></p>
-            </div>
-        </div>
-      
+    <div class="col-md-6">
+      <%= image_tag(@product.image_url, class: "img-responsive img-thumbnail") %>
     </div>
-    
-    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>
-    <%= link_to 'Back', products_path, class: "btn btn-default" %>
+  </div>
+  <div class="row mar-top">
+    <div class="col-md-6">
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
+      <h5>Best Comment</h5>
+      <% @product.highest_rating_comment.rating.times do %>
+      <span class="glyphicon glyphicon glyphicon-star"></span>
+      <% end %>
+      <p><%= @product.highest_rating_comment.body %></p>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-6">
+      <h5>Worst Comment</h5>
+      <% @product.lowest_rating_comment.rating.times do %>
+      <span class="glyphicon glyphicon glyphicon-star"></span>
+      <% end %>
+      <p><%= @product.lowest_rating_comment.body %></p>
+    </div>
+    <div class="col-xs-12">
+      <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>
+      <%= link_to 'Back', products_path, class: "btn btn-default" %>  
+    </div>
+  </div>
 </div>
