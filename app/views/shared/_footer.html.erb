@@ -1,5 +1,8 @@
 <footer class="navbar-fixed-bottom">
-  &copy; <%= Date.today.year %> Riot Bikes |
-  <%= link_to('Userlist', users_path) %> |
-  <%#= link_to('Edit my profile', edit_user_path(current_user)) %>
+  &copy; <%= Date.today.year %> Riot Bikes 
+  <% if user_signed_in? %> |
+  	<%= link_to 'Userlist', users_path %> |
+  	<%= link_to 'Edit Profile', edit_user_registration_path %> |
+  	<%= link_to 'Show Profile', current_user %>
+  <% end %>
 </footer>
