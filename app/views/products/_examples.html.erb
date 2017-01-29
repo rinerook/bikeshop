@@ -1,0 +1,14 @@
+
+<% if @comments.rating_desc.first != nil  %>
+<div class="col-md-6 col-sm-6 col-xs-6">
+  <h5><strong>Best Comment:</strong></h5>
+  <p><%= @product.highest_rating_comment.body%></p>
+</div>
+<% end %>
+
+<% if @comments.rating_asc.first != nil  %>
+<div class="col-md-6 col-sm-6 col-xs-6">
+  <h5><strong>Worst Comment:</strong></h5>
+  <p><%= @product.lowest_rating_comment.body%></p>
+</div>
+<% end %>
