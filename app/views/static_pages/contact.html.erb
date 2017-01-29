@@ -1,23 +1,25 @@
 <div class="container navplace">
-	<h1>Contact us</h1>
-	<%= flash[:notice] %>
-	<%= form_tag("/static_pages/thank_you") do %>	<!-- create a route and the file!--> 
-	<div class="row">
-		<div class="col-md-4">
-			<div class="form-group">
-				<%= label_tag :name %>
-				<%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
-			</div>
-			<div class="form-group">
-				<%= label_tag :email, "Email Address" %>
-				<%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
-			</div>
-			<div class="form-group">
-				<%= label_tag :message %>
-				<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+	<div class="row mar-top">
+		<h1>Contact us</h1>
+		<%= flash[:notice] %>
+		<%= form_tag("/static_pages/thank_you") do %>	<!-- create a route and the file!--> 
+		<div class="row">
+			<div class="col-md-4">
+				<div class="form-group">
+					<%= label_tag :name %>
+					<%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+				</div>
+				<div class="form-group">
+					<%= label_tag :email, "Email Address" %>
+					<%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+				</div>
+				<div class="form-group">
+					<%= label_tag :message %>
+					<%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+				</div>
+				<%= submit_tag "Send", class: "btn btn-default" %>   
+				<% end %>
 			</div>
 		</div>
 	</div>
-	<%= submit_tag "Send" %>   
-	<% end %>
 </div>
