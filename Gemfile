@@ -58,3 +58,6 @@ gem 'devise'
 
 #for authorization
 gem 'cancancan', '~> 1.10'
+
+# for splitting pages
+gem 'will_paginate'
