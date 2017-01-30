@@ -2,4 +2,13 @@ footer {
 	padding: 1vh;
 	background-color: #000;
 	color: #FFF;
+
+	a {
+		color: #FAAC58;
+	}
+
+	a:hover {
+		color: #FACC2E;
+		text-decoration: none;
+	}
 }

@@ -1,9 +1,30 @@
-nav {
-	font-weight: bold;
-	text-decoration: none;
-	text-transform: uppercase;
+.navbar-default {
+  background-color: #2E2E2E;
+  border-style: none;	
+  text-transform: uppercase;	
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a  {
+  color: #F5F6CE;
+  letter-spacing: 3.5px;
+  transition: color 600ms;
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #FACC2E;
 }
 
 .navbar-left {
 	padding-top: 8px;
+}
+
+.login {
+	background-color: #088A08;
+  border-radius: 4px;
+}
+
+.logout{
+	background-color: #8A0829;
+  border-radius: 4px;
 }
