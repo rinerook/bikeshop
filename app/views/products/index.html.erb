@@ -8,7 +8,9 @@
       </div>
       <div class="col-md-6 col-xs-6">
          <div class="h1 text-right">
-             <%= link_to 'New Product', new_product_path, class: "btn btn-default new-button" %>   
+           <% if signed_in? && current_user.admin? %>
+             <%= link_to 'New Product', new_product_path, class: "btn btn-default new-button" %> 
+             <% end %>  
          </div>
       </div>
       </div>
