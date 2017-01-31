@@ -40,6 +40,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
   # rspec testing framework
   gem 'rspec-rails', '~> 3.5'
+  # for functional tests
+  gem 'rails-controller-testing'
 end
 
 group :development do
