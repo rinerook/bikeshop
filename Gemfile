@@ -63,3 +63,5 @@ gem 'cancancan', '~> 1.10'
 
 # for splitting pages
 gem 'will_paginate'
+# paginate bootstrap styling
+gem 'will_paginate-bootstrap'
