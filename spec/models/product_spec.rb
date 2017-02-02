@@ -4,6 +4,7 @@ describe Product do       # tell rspec we want to test product model
   before do               # create product, user and ratings  
     @product = Product.create!(name: "race bike", description: "test", image_url: "9.jpg", colour: "hallo", price: "199")
     @user = User.create!(email: "localhorst@gmx.de", password: "password")
+    #@user = FactoryGirl.create(:user)
     @product.comments.create!(rating: 1, user: @user, body: "Awful bike!")
     @product.comments.create!(rating: 2, user: @user, body: "Nice bike!")
     @product.comments.create!(rating: 3, user: @user, body: "Great bike!")

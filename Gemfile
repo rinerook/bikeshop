@@ -42,6 +42,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   # for functional tests
   gem 'rails-controller-testing'
+  # for using factories instead of fixtures in tests
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
