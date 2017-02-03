@@ -69,3 +69,5 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate'
 # paginate bootstrap styling
 gem 'will_paginate-bootstrap'
+# for payment
+gem 'stripe'
