@@ -7,3 +7,4 @@
   data-amount="<%= (@product.price*100) %>" // Stripe expects the price you give it to be an integer in cents
   data-currency="eur">
 </script>
+<%= hidden_field_tag :product_id, @product.id %>
