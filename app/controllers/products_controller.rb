@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
       else
         @products = Product.all
       end
+      logger.debug "user searched for: #{search_term}"
   end
 
   # GET /products/1
@@ -37,6 +38,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    #byebug
     @product = Product.new(product_params)
 
     respond_to do |format|
@@ -58,6 +60,7 @@ class ProductsController < ApplicationController
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         # format.html { redirect_to :back, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
+        #logger.debug "product was updated"
       else
         format.html { render :edit }
         format.json { render json: @product.errors, status: :unprocessable_entity }
