@@ -4,7 +4,8 @@
     <% if user_signed_in? %> |
   	   <%= link_to 'Userlist', users_path %> |
   	   <%= link_to 'Edit Profile', edit_user_registration_path %> |
-  	   <%= link_to 'Show Profile', current_user %>
+  	   <%= link_to 'Show Profile', current_user %> |
+  	   Logged in as <strong><%= current_user.email %></strong>
     <% end %>
   </div>
 </footer>
