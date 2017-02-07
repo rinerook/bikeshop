@@ -1,0 +1,4 @@
+$("#new_comment").html("Thank you for your review!");  // show the message at the place of the form
+$('.product-reviews').prepend("<%= j render @comment %>"); // add product-review class to partical!
+$("#average-rating").attr('data-score', "<%= @product.average_rating %>");
+refreshRating();
