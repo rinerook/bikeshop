@@ -4,8 +4,7 @@
       <h1>Contact us</h1>
       <%= flash[:notice] %>
       <%= form_tag("/static_pages/thank_you") do %>	<!-- create a route and the file!--> 
-    
-    <div class="col-sm-6">
+      <div class="col-sm-6">
       <div class="form-group">
         <%= label_tag :name %>
         <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
