@@ -1,34 +1,36 @@
 .carousel {
-	margin: 0 -15px;
-	max-width: none;
+  margin: 0 -15px;
+  max-width: none;
+}
+
+.container-fluid .carousel>.carousel-inner {
+  height: 100vh;
 }
 
 .carousel-caption {
-	top: 0;
-	padding: 3em;
-	text-transform: uppercase;
-	font-size: 2em;
+  top: 0;
+  padding: 3em;
+  text-transform: uppercase;
+  font-size: 2em;
 }
 
-.caption-background{
-	background: rgba(0, 0, 0, 0.5); 
-	padding: 3%;
-	border-radius: 5px;
+.caption-background {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 3%;
+  border-radius: 5px;
 }
 
 // indicatorstyling 
-
-
 .carousel-indicators {
-	padding: 2em;	
+  padding: 2em;
 }
 
 .carousel-indicators li {
-	background-color: #E6E6E6;
-	border-color: black;
-	border-width: 1px; 	
+  background-color: #E6E6E6;
+  border-color: black;
+  border-width: 1px;
 }
 
 .carousel-indicators .active {
-	background-color: #81BEF7;
+  background-color: #81BEF7;
 }
