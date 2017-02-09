@@ -71,3 +71,5 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 # for payment
 gem 'stripe'
+# memcache client
+gem 'dalli'

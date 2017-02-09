@@ -9,15 +9,17 @@
       <div class="col-md-6 col-xs-6">
          <div class="h1 text-right">
            <% if signed_in? && current_user.admin? %>
-             <%= link_to 'New Product', new_product_path, class: "btn btn-default greenbtn" %> 
+             <%= link_to 'New Product', new_product_path, class: "btn greenbtn" %> 
              <% end %>  
          </div>
       </div>
       </div>
       <div class="row">
-         <% @products.each do |product| %>
-         <%= render product %>                    
-         <% end %>
+        <% cache(cache_key_for_products) do %> 
+        <% @products.each do |product| %>  
+            <%= render product %>
+          <% end %>                      
+        <% end %>
       </div>
       <hr>
 </div>
