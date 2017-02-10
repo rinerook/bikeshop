@@ -2,9 +2,9 @@
   <div class="container-fluid">
     &copy; <%= Date.today.year %> Riot Bikes 
     <% if user_signed_in? %> |
-  	   <%= link_to 'Userlist', users_path %> |
-  	   <%= link_to 'Edit Profile', edit_user_registration_path %> |
-  	   Logged in as <%= link_to current_user.email, current_user %>   
+    <%= link_to 'Userlist', users_path %> |
+    <%= link_to 'Edit Profile', edit_user_registration_path %> |
+    Logged in as <%= link_to current_user.email, current_user %>   
     <% end %>
   </div>
 </footer>
