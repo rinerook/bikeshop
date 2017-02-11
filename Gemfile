@@ -73,3 +73,5 @@ gem 'will_paginate-bootstrap'
 gem 'stripe'
 # memcache client
 gem 'dalli'
+# for caching complex data
+gem 'redis-rails'

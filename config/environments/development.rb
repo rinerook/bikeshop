@@ -23,7 +23,8 @@ Rails.application.configure do
   else
     config.action_controller.perform_caching = false
 
-    config.cache_store = :null_store
+    #config.cache_store = :null_store
+    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
   end
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
