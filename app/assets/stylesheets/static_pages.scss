@@ -5,25 +5,44 @@
 // *** basic styles for body elements *** //
 
 * {
-	box-sizing: border-box;
-
+  box-sizing: border-box;
 }
 
 body {
-	background-color: #FFF;
-	color: #000;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-	color: darkblue;
-}
-
-.textcenter {
-	text-align: center;
-	padding: 1%;
+  background-color: #FFF;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navplace {
-	padding: 66px 5% 25px 5%;
+  padding: 120px 0%;
+}
+
+.mar-top {
+  margin-top: 2%;
+}
+
+.row {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+img {
+  height: auto;
+}
+
+textarea {
+  /*max-width: 100%;*/
+  resize: none; 
+}
+
+.greenbtn {
+  background-color: #31B404;
+  border-radius: 5px;
+  color:white;
+}
+
+.redbtn{
+  background-color: #B40404;
+  border-radius: 5px;
 }

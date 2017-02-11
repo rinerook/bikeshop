@@ -52,3 +52,14 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# for authentication and other stuff
+gem 'devise'
+
+#for authorization
+gem 'cancancan', '~> 1.10'
+
+# for splitting pages
+gem 'will_paginate'
+# paginate bootstrap styling
+gem 'will_paginate-bootstrap'

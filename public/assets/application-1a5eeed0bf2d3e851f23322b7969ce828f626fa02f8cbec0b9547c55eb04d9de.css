@@ -1,0 +1,172 @@
+/* line 1, /home/rine/riotapp/app/assets/stylesheets/carousel.scss */
+img {
+  height: 100vh;
+}
+
+/* line 5, /home/rine/riotapp/app/assets/stylesheets/carousel.scss */
+.carousel {
+  margin: 0 -15px;
+  max-width: none;
+}
+
+/* line 10, /home/rine/riotapp/app/assets/stylesheets/carousel.scss */
+.carousel-caption {
+  top: 0;
+  padding: 3em;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+/* line 17, /home/rine/riotapp/app/assets/stylesheets/carousel.scss */
+.caption-background {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5%;
+}
+
+/* line 25, /home/rine/riotapp/app/assets/stylesheets/carousel.scss */
+.carousel-indicators {
+  padding: 2em;
+}
+
+/* line 29, /home/rine/riotapp/app/assets/stylesheets/carousel.scss */
+.carousel-indicators li {
+  background-color: #E6E6E6;
+  border-color: black;
+  border-width: 1px;
+}
+
+/* line 35, /home/rine/riotapp/app/assets/stylesheets/carousel.scss */
+.carousel-indicators .active {
+  background-color: #81BEF7;
+}
+/* line 1, /home/rine/riotapp/app/assets/stylesheets/footer.scss */
+footer {
+  padding: 1vh;
+  background-color: #000;
+  color: #FFF;
+}
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  font-size: 2em;
+}
+
+@font-face {
+  font-family: "raty";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/raty.eot");
+  src: url("fonts/raty.eot?#iefix") format("embedded-opentype");
+  src: url("fonts/raty.svg#raty") format("svg");
+  src: url("fonts/raty.ttf") format("truetype");
+  src: url("fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "raty";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+.cancel-on-png:before {
+  content: "\e600";
+}
+
+.cancel-off-png:before {
+  content: "\e601";
+}
+
+.star-on-png:before {
+  content: "\f005";
+}
+
+.star-off-png:before {
+  content: "\f006";
+}
+
+.star-half-png:before {
+  content: "\f123";
+}
+/* line 1, /home/rine/riotapp/app/assets/stylesheets/navigation.scss */
+nav {
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* line 7, /home/rine/riotapp/app/assets/stylesheets/navigation.scss */
+.navbar-left {
+  padding-top: 8px;
+}
+/* line 5, /home/rine/riotapp/app/assets/stylesheets/products.scss */
+h2 {
+  margin-top: -2px;
+}
+
+/* line 9, /home/rine/riotapp/app/assets/stylesheets/products.scss */
+.actions {
+  padding: 1%;
+}
+
+/* line 13, /home/rine/riotapp/app/assets/stylesheets/products.scss */
+.new-button {
+  background-color: #81F79F;
+}
+
+/* line 17, /home/rine/riotapp/app/assets/stylesheets/products.scss */
+#products {
+  padding-top: 2%;
+}
+/* line 7, /home/rine/riotapp/app/assets/stylesheets/static_pages.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 12, /home/rine/riotapp/app/assets/stylesheets/static_pages.scss */
+body {
+  background-color: #FFF;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* line 18, /home/rine/riotapp/app/assets/stylesheets/static_pages.scss */
+.textcenter {
+  text-align: center;
+  padding: 1%;
+}
+
+/* line 23, /home/rine/riotapp/app/assets/stylesheets/static_pages.scss */
+.navplace {
+  padding: 66px 0%;
+}
+
+/* line 27, /home/rine/riotapp/app/assets/stylesheets/static_pages.scss */
+.mar-top {
+  margin-top: 2%;
+}
+
+/* line 31, /home/rine/riotapp/app/assets/stylesheets/static_pages.scss */
+.row {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+

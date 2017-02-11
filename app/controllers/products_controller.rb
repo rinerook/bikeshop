@@ -1,20 +1,30 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, :except => [:index, :show] # allow "guests" to see index and show page
+  
   # GET /products
   # GET /products.json
+
   def index
     if params[:q]
-      search_term = params[:q] # return filtered list
-      @products = Product.where("name LIKE ?", "%#{search_term}%")
-    else
-      @products = Product.all
-    end    
+
+      search_term = params[:q]
+      if (Rails.env == "production")  # check if on production environment (heroku)
+        @products = Product.where("name ilike ?", "%#{search_term}%")
+      else
+        @products = Product.where("name LIKE ?", "%#{search_term}%")
+      end
+      else
+        @products = Product.all
+      end
+
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    # add pagination at comments, 5 commets on one site
+    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], per_page: 5)
   end
 
   # GET /products/new

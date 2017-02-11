@@ -1,9 +1,7 @@
-<div class="container-fluid navplace">
+<div class="container navplace">
+	<div class="row mar-top">
 		<h1>New Product</h1>
-
 		<%= render 'form', product: @product %>
-
-		<div class="container">
-			<%= link_to 'Back', products_path %>
-		</div>
+		<%= link_to 'Back', products_path, class: "btn btn-default" %>
+	</div>
 </div>
