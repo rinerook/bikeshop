@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   #devise_for :users  # new routes below
-  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}, :controllers => { :registrations => "user_registrations" }
 
-  #resources :products 			# cause we generated our products controller via scaffolding, it added this route as wel
+  #resources :products      # cause we generated our products controller via scaffolding, it added this route as wel
   resources :products do
     resources :comments
   end
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/contact'
   
-  get 'static_pages/index'
+  # get 'static_pages/index'
   # root 'static_pages#index'
   root 'static_pages#landing_page'
   # root 'static_pages#index'
@@ -21,6 +21,5 @@ Rails.application.routes.draw do
   resources :orders, only: [:index, :show, :create, :destroy]
 
   post 'static_pages/thank_you'
-  post '/payments/create'
-   
+ 
 end
