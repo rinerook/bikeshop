@@ -1,5 +1,6 @@
 class UserMailer < ApplicationMailer
 
+
 	default from: "rine@nurfuerspam.de"
 
 	def contact_form(email, name, message)
@@ -8,4 +9,5 @@ class UserMailer < ApplicationMailer
 	      :to => 'rine@nurfuerspam.de',
 	      :subject => "A new contact form message from #{name}")
 	end
+
 end

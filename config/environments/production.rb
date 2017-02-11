@@ -94,6 +94,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
+
 # Sendgrid
 ActionMailer::Base.smtp_settings = {
   :address => 'smtp.sendgrid.net',
@@ -103,4 +104,6 @@ ActionMailer::Base.smtp_settings = {
   :password => ENV['SENDGRID_PASSWORD'],
   :domain => 'heroku.com',
   :enable_starttls_auto => true
+
 }
+
