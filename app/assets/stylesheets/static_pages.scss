@@ -15,7 +15,7 @@ body {
 }
 
 .navplace {
-  padding: 66px 0%;
+  padding: 120px 0%;
 }
 
 .mar-top {
@@ -33,5 +33,16 @@ img {
 
 textarea {
   /*max-width: 100%;*/
-  resize: none;	
+  resize: none; 
+}
+
+.greenbtn {
+  background-color: #31B404;
+  border-radius: 5px;
+  color:white;
+}
+
+.redbtn{
+  background-color: #B40404;
+  border-radius: 5px;
 }

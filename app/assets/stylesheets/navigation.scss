@@ -1,12 +1,12 @@
 .navbar-default {
   background-color: #2E2E2E;
-  border-style: none;	
-  text-transform: uppercase;	
+  border-style: none; 
+  text-transform: uppercase;  
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a  {
   color: #F5F6CE;
-  letter-spacing: 3.5px;
+  letter-spacing: 2px;
   transition: color 600ms;
 }
 
@@ -15,16 +15,13 @@
   color: #FACC2E;
 }
 
+.navbar-fixed-top .navbar-collapse {
+     max-height: 380px; 
+}
 .navbar-left {
-	padding-top: 8px;
+  padding-top: 8px;
 }
 
-.login {
-	background-color: #088A08;
-  border-radius: 4px;
-}
-
-.logout{
-	background-color: #8A0829;
-  border-radius: 4px;
+.navbar-toggle {
+  margin-top: 16px;
 }

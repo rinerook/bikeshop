@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
 
   def index
     if params[:q]
+
       search_term = params[:q]
       if (Rails.env == "production")  # check if on production environment (heroku)
         @products = Product.where("name ilike ?", "%#{search_term}%")
@@ -16,6 +17,7 @@ class ProductsController < ApplicationController
       else
         @products = Product.all
       end
+
   end
 
   # GET /products/1
