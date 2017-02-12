@@ -16,7 +16,7 @@ class Product < ApplicationRecord							#  product class is a subclass (inherits
 	end
 
 	def average_rating
-  		comments.average(:rating).to_f
+    comments.average(:rating).to_f
 	end
 
 end
