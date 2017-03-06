@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <%= render "shared/header" %>
-  </head>
-  <body>
-    <%= render "shared/navigation" %>
-    <%= yield %>
-    <%= render "shared/footer" %>
-  </body>
+
+   <head>
+   <%= render 'shared/head' %>
+   </head>
+
+   <body>
+
+     	<%= render 'shared/navigation' %>
+
+      <!-- rails content -->
+      <%= yield %>
+      <!-- /rails content-->
+
+      <%= render 'shared/footer' %>
+
+   </body>
+
+
 </html>
