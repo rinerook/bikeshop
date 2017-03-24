@@ -9,7 +9,6 @@
          <% end %>
       </ol>
       <!-- Wrapper for slides -->
-      <% cache do %>
       <div class="carousel-inner" role="listbox">
          <% @products.each do |product| %>
          <div class="item<%= " active" if product == @products.first %>">
@@ -23,7 +22,6 @@
          </div>
          <% end %>
       </div>
-      <% end %>
       <!-- Controls -->
       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
