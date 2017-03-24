@@ -7,7 +7,6 @@ class ProductsController < ApplicationController
 
   def index
     if params[:q]
-
       search_term = params[:q]
       if (Rails.env == "production")  # check if on production environment (heroku)
         @products = Product.where("name ilike ?", "%#{search_term}%")
@@ -17,14 +16,14 @@ class ProductsController < ApplicationController
       else
         @products = Product.all
       end
-
+      logger.debug "user searched for: #{search_term}"
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    # add pagination at comments, 5 commets on one site
-    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], per_page: 5)
+    # add pagination at comments, 5 comments on one site
+    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], per_page: 4)
   end
 
   # GET /products/new
@@ -39,6 +38,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    #byebug
     @product = Product.new(product_params)
 
     respond_to do |format|
@@ -60,6 +60,7 @@ class ProductsController < ApplicationController
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         # format.html { redirect_to :back, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
+        #logger.debug "product was updated"
       else
         format.html { render :edit }
         format.json { render json: @product.errors, status: :unprocessable_entity }

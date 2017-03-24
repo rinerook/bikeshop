@@ -23,7 +23,8 @@ Rails.application.configure do
   else
     config.action_controller.perform_caching = false
 
-    config.cache_store = :null_store
+    #config.cache_store = :null_store
+    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
   end
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
@@ -38,6 +39,9 @@ Rails.application.configure do
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
+
+  # tell the rails generator to generate plain JavaScript files instead of CoffeeScript files
+  config.app_generators.javascript_engine = :javascript
 
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
