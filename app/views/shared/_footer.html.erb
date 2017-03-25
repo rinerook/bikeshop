@@ -1,10 +1,19 @@
+
 <footer class="navbar-fixed-bottom">
   <div class="container-fluid">
     &copy; <%= Date.today.year %> Riot Bikes 
-    <% if user_signed_in? %> |
-  	   <%= link_to 'Userlist', users_path %> |
-  	   <%= link_to 'Edit Profile', edit_user_registration_path %> |
-  	   Logged in as <%= link_to current_user.email, current_user %>   
+    <% if user_signed_in? %>
+    <div class="dropdown" id="usermenu">
+      <button class="btn dropdown-toggle" type="button"  data-toggle="dropdown">
+      Logged in as <%= current_user.email %>  
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="usermenu">
+        <li role="presentation"><%= link_to 'Userlist', users_path, role: "menuitem" %></li>
+        <li role="presentation"><%= link_to 'Show Profile', current_user, role: "menuitem"  %></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><%= link_to 'Edit Profile', edit_user_registration_path, role: "menuitem"  %></li>
+      </ul>
+    </div>
     <% end %>
   </div>
 </footer>

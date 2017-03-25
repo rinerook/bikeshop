@@ -3,12 +3,18 @@ footer {
 	background-color: #000;
 	color: #FFF;
 
-	a {
-		color: #FAAC58;
-	}
+  .btn {
+    background-color:black;
+    padding: 0;
+  }
 
-	a:hover {
-		color: #FACC2E;
-		text-decoration: none;
-	}
+  .btn.focus, .btn:focus, .btn:hover {
+      color: #FACC2E;
+      text-decoration: none;
+  }
+
+}
+
+#usermenu {
+  float: right;
 }
